@@ -10,6 +10,14 @@ class App extends Component {
       <Context.Consumer>
         {(context) => (
           <div className="App">
+            <div className="timeline">
+              <ul>{
+                context.state.timeline.map((item) => {
+                  return <li>{item}</li>
+                })
+              }</ul>
+            </div>
+          <div className="game">
             {
               context.state.currentSide === 'home' ? 
                 <div>
@@ -35,6 +43,8 @@ class App extends Component {
             <Dice dice={context.state.dice2} />
     
             <button onClick={context.rollDice}>ROLL</button>
+            <button onClick={context.doublePlay}>Double Play</button>
+          </div>
           </div>
         )}
       </Context.Consumer>

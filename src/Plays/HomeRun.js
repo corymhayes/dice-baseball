@@ -5,23 +5,16 @@ let HomeRun = (obj1, obj2) => {
     (acc, cur) => acc + cur, 0
   );
 
+  console.log(numOfRunners)
+
   obj1.firstBase = 0;
   obj1.secondBase = 0;
   obj1.thirdBase = 0;
-  obj1.homePlate = 0;
 
-  if(numOfRunners >= 1){
-    if(obj2.currentSide === 'home'){
-      return obj2.homeScore += numOfRunners;
-    } else {
-      return obj2.awayScore += numOfRunners;
-    }
+  if(obj2.currentSide === 'home'){
+    return obj2.homeScore += (numOfRunners);
   } else {
-    if(obj2.currentSide === 'home'){
-      return obj2.homeScore += 1;
-    } else {
-      return obj2.awayScore += 1;
-    }
+    return obj2.awayScore += (numOfRunners);
   }
 }
 

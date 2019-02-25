@@ -1,0 +1,7 @@
+@import '../Colors.scss';
+
+.outs-runs{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-bottom: 5px solid $khaki;
+}

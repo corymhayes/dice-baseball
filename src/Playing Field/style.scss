@@ -1,0 +1,55 @@
+@import '../Colors.scss';
+
+.playing-board{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .field{
+    height: 25rem;
+    width: 25rem;
+    border: 5px solid $khaki;
+    transform: rotate(45deg);
+
+    .bases{
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 15% 1fr 15%;
+      grid-template-rows: 15% 1fr 15%;
+
+      .first-base,
+      .second-base,
+      .third-base,
+      .home-plate{
+        height: 100%;
+        width: 100%;
+        background-color: $khaki;
+      }
+
+      .first-base{
+        grid-row: 1;
+        grid-column: 3;
+      }
+
+      .second-base{
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      .third-base{
+        grid-row: 3;
+        grid-column: 1;;
+      }
+
+      .home-plate{
+        grid-row: 3;
+        grid-column: 3;
+      }
+
+      .runner{
+        background-color: $red;
+      }
+    }
+  }
+}

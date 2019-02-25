@@ -7,11 +7,10 @@ let Triple = (obj) => {
   } else if(obj.firstBase === 1 && obj.thirdBase === 1){
     obj.firstBase = 0;
     obj.thirdBase = 1;
-    obj.homePlate = 1;
+    obj.homePlate = 2;
   } else if(obj.secondBase === 1 && obj.thirdBase === 1){
-    obj.firstBase = 0;
-    obj.secondBase = 1;
-    obj.thirdBase = 0;
+    obj.secondBase = 0;
+    obj.thirdBase = 1;
     obj.homePlate = 2;
   } else if(obj.firstBase === 1 && obj.secondBase === 1){
     obj.firstBase = 0;

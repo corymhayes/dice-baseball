@@ -1,29 +1,20 @@
 
-let Single = (a) => {
+let Walk = (a) => {
   if(a.firstBase === 1 && a.secondBase === 1 & a.thirdBase === 1){
     a.firstBase = 1;
     a.secondBase = 1;
     a.thirdBase = 1;
     a.homePlate = 1;
   } else if(a.firstBase === 1 && a.thirdBase === 1){
-    a.firstBase = 1;
     a.secondBase = 1;
-    a.thirdBase = 0;
-    a.homePlate = 1;
   } else if(a.secondBase === 1 && a.thirdBase === 1){
     a.firstBase = 1;
-    a.secondBase = 0;
-    a.thirdBase = 1;
-    a.homePlate = 1;
   } else if(a.firstBase === 1 && a.secondBase === 1){
     a.firstBase = 1;
     a.secondBase = 1;
     a.thirdBase = 1;
-    a.homePlate = 0;
   } else if(a.thirdBase === 1){
     a.firstBase = 1;
-    a.thirdBase = 0;
-    a.homePlate = 1;
   } else if(a.secondBase === 1){
     a.firstBase = 1;
   } else if(a.firstBase === 1){
@@ -36,4 +27,4 @@ let Single = (a) => {
   return a;
 }
 
-export default Single;
+export default Walk;

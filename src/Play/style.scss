@@ -1,0 +1,15 @@
+@import '../Colors.scss';
+
+.play{
+  justify-self: stretch;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5px solid $khaki;
+  
+  h1{
+    font-weight: normal;
+    font-size: calc(1em + 4vw);
+  }
+}

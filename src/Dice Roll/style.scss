@@ -1,0 +1,17 @@
+@import '../Colors.scss';
+
+.roll{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  .die{
+    display: flex;
+    margin-bottom: 1.5rem;
+  }
+
+  .dice:first-child{
+    margin-right: 1.5rem;
+  }
+}

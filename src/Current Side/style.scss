@@ -1,0 +1,14 @@
+@import '../Colors.scss' ;
+
+.current-side{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5px solid $khaki;
+
+  h1{
+    font-size: calc(1em + 7vw);
+    font-weight: normal;
+    font-family: 'bartenderserif_letterpress'
+  }
+}

@@ -1,0 +1,24 @@
+@import '../Colors.scss';
+
+.number{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5px solid $khaki;
+
+  .one{
+    grid-column: 1;
+    font-size: 10rem;
+  }
+
+  .st{
+    grid-column: 2;
+    font-size: 5rem;
+    line-height: 2.25rem;
+    justify-self: flex-end;
+  }
+
+  .inning{
+    color: $red;
+  }
+}

@@ -1,0 +1,12 @@
+@import '../../Colors.scss';
+
+button{
+  height: 40px;
+  width: 150px;
+  background-color: $red;
+  border: none;
+  color: $khaki;
+  font-size: 3rem;
+  font-family: 'bartenderserif_letterpress', sans-serif;
+  line-height: 0px;
+}
