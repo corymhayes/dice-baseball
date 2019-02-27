@@ -1,9 +1,9 @@
 @import '../Colors.scss';
 
-.playing-board{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+// .playing-board{
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
 
   .field{
     height: 25rem;
@@ -52,4 +52,47 @@
       }
     }
   }
+// }
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+
+    .field{
+      grid-row: 2;
+      grid-column: 2;
+      width: 11rem;
+      height: 11rem;
+      border: 5px solid $khaki;
+      transform: rotate(45deg);
+      display: grid;
+      grid-template-rows: repeat(5, 1fr);
+      grid-template-columns: repeate(5, 1fr);
+
+      .first-base,
+      .second-base,
+      .third-base{
+        background-color: $khaki;
+      }
+
+      .first-base{
+        grid-row: 1;
+        grid-column: 5;
+      }
+
+      .second-base{
+        grid-row: 1;
+        grid-column: 1;
+      }
+
+      .third-base{
+        grid-row: 5;
+        grid-column: 1;
+      }
+
+      .runner{
+        background-color: $red;
+      }
+    }
 }

@@ -12,9 +12,9 @@ let HomeRun = (obj1, obj2) => {
   obj1.thirdBase = 0;
 
   if(obj2.currentSide === 'home'){
-    return obj2.homeScore += (numOfRunners);
+    obj2.runs += numOfRunners;
   } else {
-    return obj2.awayScore += (numOfRunners);
+    obj2.runs += numOfRunners;
   }
 }
 

@@ -10,6 +10,24 @@
   
   h1{
     font-weight: normal;
-    font-size: calc(1em + 4vw);
+    font-size: calc(1em + 1vw);
   }
+}
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+    
+    .play{
+      border: none;
+      
+      h1{
+        font-size: 5rem;
+        text-transform: lowercase;
+        line-height: 2.5rem;
+        text-align: center;
+        border: none;
+      }
+    }
 }

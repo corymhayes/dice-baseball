@@ -1,4 +1,4 @@
-let SingleWithRunners = (obj1) => {
+let SingleWithRunners = (obj1, obj2) => {
   let varA = Object.values(obj1).reduce((item, currentItem) => item + currentItem)
 
   if(varA > 1){
@@ -6,28 +6,28 @@ let SingleWithRunners = (obj1) => {
       obj1.firstBase = 1;
       obj1.secondBase = 0;
       obj1.thirdBase = 1;
-      obj1.homePlate = 2;
+      obj2.runs +=2;
     } else if(obj1.firstBase === 1 && obj1.thirdBase === 1){
       obj1.secondBase = 0;
       obj1.thirdBase = 1;
-      obj1.homePlate = 1;
+      obj2.runs += 1;
     } else if(obj1.secondBase === 1 && obj1.thirdBase === 1){
       obj1.firstBase = 1;
       obj1.secondBase = 0;
       obj1.thirdBase = 0;
-      obj1.homePlate = 2;
+      obj2.runs += 2;
     } else if(obj1.firstBase === 1 && obj1.secondBase === 1){
       obj1.secondBase = 0;
       obj1.thirdBase = 1;
-      obj1.homePlate = 1;
+      obj2.runs += 1;
     } else if(obj1.thirdBase === 1){
       obj1.firstBase = 1;
       obj1.thirdBase = 0;
-      obj1.homePlate = 1;
+      obj2.runs += 1;
     } else if(obj1.secondBase === 1){
       obj1.firstBase = 1;
       obj1.secondBase = 0;
-      obj1.homePlate = 1;
+      obj2.runs += 1;
     } else if(obj1.firstBase === 1){
       obj1.firstBase = 1;
       obj1.thirdBase = 1;

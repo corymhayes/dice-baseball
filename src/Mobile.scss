@@ -35,43 +35,6 @@
           grid-template-rows: 25% 50% 25%;
           grid-template-columns: 25% 50% 25%;
 
-          .field{
-            grid-row: 2;
-            grid-column: 2;
-            width: 11rem;
-            height: 11rem;
-            border: 5px solid $khaki;
-            transform: rotate(45deg);
-            display: grid;
-            grid-template-rows: repeat(5, 1fr);
-            grid-template-columns: repeate(5, 1fr);
-
-            .first-base,
-            .second-base,
-            .third-base{
-              background-color: $khaki;
-            }
-
-            .first-base{
-              grid-row: 1;
-              grid-column: 5;
-            }
-
-            .second-base{
-              grid-row: 1;
-              grid-column: 1;
-            }
-
-            .third-base{
-              grid-row: 5;
-              grid-column: 1;
-            }
-
-            .runner{
-              background-color: $red;
-            }
-          }
-
           .inning,
           .outs,
           .runs{
@@ -81,23 +44,6 @@
             justify-content: center;
             align-items: center;
             flex-flow: column;
-          }
-
-          .inning{
-            grid-row: 1;
-            grid-column: 3;
-            border-left: 5px solid $khaki;
-            border-bottom: 5px solid $khaki;
-
-            .inning-number{
-              display: flex;
-
-              .ordinal{
-                line-height: 1rem;
-                font-size: 2rem;
-              }
-            }
-
           }
 
           .outs{
@@ -131,42 +77,6 @@
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           border-bottom: 5px solid $khaki;
-          
-          .die{
-            border-right: 5px solid $khaki;
-          }
-
-          .die,
-          .play{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
-          .dice{
-            height: 4rem;
-            width: 4rem;
-          }
-
-          .dice:first-child{
-            margin-right: 1rem;
-          }
-
-          .play{
-            font-size: 5rem;
-            text-transform: lowercase;
-            line-height: 2rem;
-            text-align: center;
-          }
-        }
-
-        button{
-          grid-row: 4;
-          background-color: $red;
-          color: $khaki;
-          font-size: 3rem;
-          border: none;
-          font-family: 'bartenderserif_letterpress', sans-serif;
         }
       }
 }

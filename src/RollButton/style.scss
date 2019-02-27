@@ -1,0 +1,29 @@
+@import '../Colors.scss';
+
+button{
+  height: 40px;
+  width: 150px;
+  background-color: $red;
+  border: none;
+  color: $khaki;
+  font-size: 3rem;
+  font-family: 'bartenderserif_letterpress', sans-serif;
+  line-height: 0px;
+}
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+    
+    button{
+      grid-row: 4;
+      height: 100%;
+      width: 100%;
+      background-color: $red;
+      color: $khaki;
+      font-size: calc(1rem + 7vh);
+      border: none;
+      font-family: 'bartenderserif_letterpress', sans-serif;
+    }
+}

@@ -15,3 +15,24 @@
     margin-right: 1.5rem;
   }
 }
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+
+    .roll{
+      border-right: 5px solid $khaki;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      .die{
+        margin-bottom: 0;
+      }
+      
+      .dice:first-child{
+        margin-right: 1rem;
+      }
+    }
+}

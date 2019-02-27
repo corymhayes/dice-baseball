@@ -8,36 +8,36 @@ class CurrentInning extends Component {
       <>
         {
           this.props.inning === 1 ?
+            <div className="inning">
               <div className="number">
-                <div className="one">1</div>
-                <div className="st">
-                  st<br />
-                  <span className="inning">inning</span>
-                </div>
+                <h1>{this.props.inning}</h1>
+                <div className="ordinal">st</div>
               </div>
+              <span className="title">inning</span>
+            </div>
           : this.props.inning === 2 ?
-            <div className="number">
-              <div className="one">2</div>
-              <div className="st">
-                nd<br />
-                <span className="inning">inning</span>
+            <div className="inning">
+              <div className="number">
+                <h1>{this.props.inning}</h1>
+                <div className="ordinal">nd</div>
               </div>
+              <span className="title">inning</span>
             </div>
           : this.props.inning === 3 ?
-            <div className="number">
-              <div className="one">3</div>
-              <div className="st">
-                rd<br />
-                <span className="inning">inning</span>
+            <div className="inning">
+              <div className="number">
+                <h1>{this.props.inning}</h1>
+                <div className="ordinal">rd</div>
               </div>
+              <span className="title">inning</span>
             </div>
           :
-            <div className="number">
-              <div className="one">{this.props.inning}</div>
-              <div className="st">
-                th<br />
-                <span className="inning">inning</span>
+            <div className="inning">
+              <div className="number">
+                <h1>{this.props.inning}</h1>
+                <div className="ordinal">th</div>
               </div>
+              <span className="title">inning</span>
             </div>
           }
       </>

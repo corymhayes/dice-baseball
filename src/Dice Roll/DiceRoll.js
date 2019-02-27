@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Dice from './Dice/Dice';
-import RollButton from './RollButton/RollButton'
+// import RollButton from './RollButton/RollButton'
 
 import './style.scss';
 
@@ -13,7 +13,7 @@ class DiceRoll extends Component {
           <Dice diceAmount = {this.props.amount2} />
         </div>
 
-        <RollButton click={this.props.click} />
+        {/* <RollButton click={this.props.click} /> */}
       </div>
     )
   }

@@ -1,24 +1,52 @@
 @import '../Colors.scss';
 
-.number{
+.inning{
   display: flex;
   justify-content: center;
   align-items: center;
   border-bottom: 5px solid $khaki;
 
-  .one{
+  .number{
     grid-column: 1;
     font-size: 10rem;
   }
 
-  .st{
+  .ordinal{
     grid-column: 2;
     font-size: 5rem;
     line-height: 2.25rem;
     justify-self: flex-end;
   }
 
-  .inning{
+  .title{
     color: $red;
   }
+}
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+
+    .inning{
+      height: 100%;
+      width: 100%;
+      grid-row: 1;
+      grid-column: 3;
+      border-left: 5px solid $khaki;
+      border-bottom: 5px solid $khaki;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .number{
+        display: flex;
+        font-size: 3rem;
+
+        .ordinal{
+          line-height: 1rem;
+          font-size: 3rem;
+        }
+      }
+    }
 }

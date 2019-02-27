@@ -7,7 +7,6 @@ import AutoOut from './Plays/AutoOut';
 import Triple from './Plays/Triple';
 import SacFly from './Plays/SacFly';
 import SingleWithRunners from './Plays/SingleWithRunners'
-import RecordRuns from './Plays/RecordRuns';
 
 
 
@@ -20,7 +19,6 @@ let DiceRollDecisions = (dice1,dice2,obj1, obj2) => {
 
   if((dice1 === 1 && dice2 === 2) || (dice1 === 2 && dice2 === 1)){
     Double(obj1, obj2)
-    RecordRuns(obj1, obj2);
     return "Double";
   }
 
@@ -30,8 +28,7 @@ let DiceRollDecisions = (dice1,dice2,obj1, obj2) => {
   }
 
   if((dice1 === 1 && dice2 === 4) || (dice1 === 4 && dice2 === 1)){
-    Walk(obj1)
-    RecordRuns(obj1, obj2);
+    Walk(obj1, obj2)
     return "Walk";
   }
 
@@ -41,8 +38,7 @@ let DiceRollDecisions = (dice1,dice2,obj1, obj2) => {
   }
 
   if((dice1 === 1 && dice2 === 6) || (dice1 === 6 && dice2 === 1)){
-    Single(obj1);
-    RecordRuns(obj1, obj2);
+    Single(obj1, obj2);
     return "Single"
   }
 
@@ -62,8 +58,7 @@ let DiceRollDecisions = (dice1,dice2,obj1, obj2) => {
   }
 
   if((dice1 === 2 && dice2 === 5) || (dice1 === 5 && dice2 === 2)){
-    SingleWithRunners(obj1)
-    RecordRuns(obj1, obj2);
+    SingleWithRunners(obj1, obj2)
     return "Single runners advance";
   }
 
@@ -73,14 +68,12 @@ let DiceRollDecisions = (dice1,dice2,obj1, obj2) => {
   }
 
   if(dice1 === 3 && dice2 === 3){
-    Walk(obj1);
-    RecordRuns(obj1, obj2);
+    Walk(obj1, obj2);
     return "Walk";
   }
 
   if((dice1 === 3 && dice2 === 4) || (dice1 === 4 && dice2 === 3)){
-    Single(obj1);
-    RecordRuns(obj1, obj2);
+    Single(obj1, obj2);
     return "Single"
   }
 
@@ -95,8 +88,7 @@ let DiceRollDecisions = (dice1,dice2,obj1, obj2) => {
   }
 
   if(dice1 === 4 && dice2 === 4){
-    Walk(obj1);
-    RecordRuns(obj1, obj2);
+    Walk(obj1, obj2);
     return "Walk";
   }
 
@@ -117,13 +109,11 @@ let DiceRollDecisions = (dice1,dice2,obj1, obj2) => {
 
   if((dice1 === 5 && dice2 === 6) || (dice1 === 6 && dice2 === 5)){
     SacFly(obj1, obj2);
-    RecordRuns(obj1, obj2);
-    return "Sac Fly, runner(s) advance 1 base";
+    return "Sac Fly, runners advance";
   }
 
   if(dice1 === 6 && dice2 === 6){
-    Triple(obj1);
-    RecordRuns(obj1, obj2);
+    Triple(obj1, obj2);
     return "Triple";
   }
   
