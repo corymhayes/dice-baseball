@@ -132,6 +132,7 @@ body{
 @media only screen 
     and (device-width : 375px) 
     and (device-height : 812px) 
+    and (orientation: portrait)
     and (-webkit-device-pixel-ratio : 3) { 
 
       *{
@@ -216,6 +217,7 @@ body{
 @media only screen 
     and (device-width : 812px) 
     and (device-height : 375px) 
+    and (orientation: landscape)
     and (-webkit-device-pixel-ratio : 3) { 
 
       *{
