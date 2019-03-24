@@ -1,0 +1,76 @@
+@import '../Colors.scss';
+
+.inning-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // border-bottom: 5px solid $khaki;
+  color: $khaki;
+
+  .number{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+
+    h1{
+      grid-row: 1;
+      grid-column: 1;
+      display: flex;
+      align-items: center;
+      font-size: 6rem;
+    }
+
+    .words{
+      grid-row: 1;
+      grid-column: 2;
+      display: flex;
+      flex-flow: column;
+    }
+
+    .ordinal{
+      font-size: 3rem;
+      justify-self: center;
+      line-height: 3.1rem;
+    }
+
+    .title{
+      color: $red;
+      font-size: 4rem;
+      line-height: .3rem;
+    }
+  }
+}
+
+@media only screen 
+    and (device-width : 375px) 
+    and (device-height : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+
+    .inning-container{
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      border: none;
+
+      .number{
+        display: flex;
+
+        h1{
+          font-size: 5rem;
+          line-height: 3rem;
+        }
+
+        .ordinal{
+          line-height: 1rem;
+          font-size: 3rem;
+        }
+      }
+      
+      .title{
+        color: $red;
+        font-size: 2.5rem;
+        line-height: 1rem;
+      }
+    }
+}

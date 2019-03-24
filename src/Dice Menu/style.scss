@@ -1,0 +1,155 @@
+@import '../Colors.scss';
+
+@keyframes slide-in{
+  0%{
+    width: 0%;
+  }
+
+  100%{
+    width: 100%;
+  }
+}
+
+.dice-combination-menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .dice-menu{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    z-index: 10;
+
+    .dice-combos-body{
+      height: 100vh;
+      background-color: $red;
+      display: flex;
+      flex-flow: column;
+      padding: 0 1.5rem;
+      overflow-y: scroll;
+
+      .dice-combos-title{
+        width: 100%;
+        margin: 2rem 0;
+
+        h1{
+          font-family: 'bartenderscript_letterpress';
+          font-size: 3rem;
+          line-height: 2rem;
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+
+        .under-graphic{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          hr{
+            width: 30%;
+            border: 1px solid $khaki;
+          }
+
+          .graphic{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1px;
+            transform: rotate(-45deg);
+            margin: 0 1.5rem;
+
+            .dice{
+              height: 1rem;
+              width: 1rem;
+            }
+
+            .dot{
+              height: .25rem;
+              width: .25rem;
+            }
+
+            .one,
+            .two,
+            .three,
+            .four,
+            .five,
+            .six{
+              height: 1rem;
+              width: 1rem;
+              display: grid;
+              grid-template-rows: repeat(3, 1fr);
+              grid-template-columns: repeat(3, 1fr);
+              place-items: center center;
+            }
+          }
+        }
+      }
+
+      .dice-combos{
+        display: grid;
+        width: 100%;
+        grid-template-rows: repeat(11, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+
+        .dice-combo{
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1rem;
+
+          .die{
+            margin: 0 0 .5rem 0;
+          }
+
+          .dice{
+            height: 1.5rem;
+            width: 1.5rem;
+          }
+
+          .dice:first-child{
+            margin-right: .5rem;
+          }
+
+          .dot{
+            height: .37rem;
+            width: .4rem;
+          }
+
+          .one,
+          .two,
+          .three,
+          .four,
+          .five,
+          .six{
+            height: 1.5rem;
+            width: 1.5rem;
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            place-items: center center;
+          }
+          
+          h5{
+            font-weight: normal;
+            font-size: 2rem;
+            line-height: 1rem;
+            text-align: center;
+
+            span{
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    .menu-overlay{
+      background-color: rgba(0,0,0,.75);
+      z-index: 1000;
+      display: fixed;
+    }
+  }
+}  

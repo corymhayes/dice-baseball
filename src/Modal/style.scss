@@ -1,0 +1,89 @@
+@import "../Colors.scss";
+
+.modal-container{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,.75);
+  z-index: 100;
+
+  .modal-body{
+    height: 50%;
+    width: 50%;
+    background-color: $grey;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    overflow-y: scroll;
+    font-family: 'bartendersans', sans-serif;
+
+    img{
+      height: 25%;
+    }
+
+    p{
+      margin: 2rem 0;
+      font-size: 3rem;
+      font-weight: normal;
+      text-transform: lowercase;
+      text-align: center;
+      line-height: 1.75rem;
+    }
+
+    button{
+      background-color: $red;
+      margin-bottom: 2rem;
+      line-height: inherit;
+    }
+
+    table{
+      width: 75%;
+      font-size: 2rem;
+      border: 5px solid $khaki;
+      border-collapse: collapse;
+
+      td{
+        vertical-align: middle;
+        padding: 1rem;
+      }
+
+      // .table-dice{
+      //   display: flex;
+      //   flex-flow: row;
+      //   justify-content: center;
+      //   align-items: center;
+      // }
+
+      .dice{
+        height: 2rem;
+        width: 2rem;
+        margin-right: .5rem;
+      }
+
+      .die{
+        margin-bottom: 0;
+      }
+
+      .one,
+      .two,
+      .three,
+      .four,
+      .five,
+      .six{
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+
+      .dot{
+        height: .45rem;
+        width: .45rem;
+      }
+    }
+  }
+}
+

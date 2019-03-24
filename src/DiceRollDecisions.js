@@ -59,7 +59,7 @@ let DiceRollDecisions = (dice1,dice2,obj1, obj2) => {
 
   if((dice1 === 2 && dice2 === 5) || (dice1 === 5 && dice2 === 2)){
     SingleWithRunners(obj1, obj2)
-    return "Single runners advance";
+    return `Single, runners advance two bases`;
   }
 
   if((dice1 === 2 && dice2 === 6) || (dice1 === 6 && dice2 === 2)){
@@ -109,7 +109,7 @@ let DiceRollDecisions = (dice1,dice2,obj1, obj2) => {
 
   if((dice1 === 5 && dice2 === 6) || (dice1 === 6 && dice2 === 5)){
     SacFly(obj1, obj2);
-    return "Sac Fly, runners advance";
+    return "Sac Fly, runners advance one base";
   }
 
   if(dice1 === 6 && dice2 === 6){

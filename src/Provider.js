@@ -20,7 +20,9 @@ export default class Provider extends Component{
     dice1: 1,
     dice2: 1,
     fieldRuling: 'single',
-    timeline: []
+    timeline: [],
+    gameStart: false,
+    diceMenu: false
   }
 
   render(){
@@ -42,28 +44,20 @@ export default class Provider extends Component{
             fieldRuling: decisions
           });
         },
-        doublePlay: () => {
-          let bases = this.state.bases;
-
-          let diceRollNumber1 = 2;
-          let diceRollNumber2 = 2;
-
-          let decisions = DiceRollDecisions(diceRollNumber1, diceRollNumber2, this.state.bases, this.state);
-
-          let tempTimeline = this.state.timeline;
-
-          Object.values(this.state.bases).map((item) => {
-            return tempTimeline.push(`${item}`)
-          })
-          tempTimeline.push(`Play: ${decisions}`)
-
+        startGame: () => {
           this.setState({
-            bases: bases,
-            dice1: diceRollNumber1,
-            dice2: diceRollNumber2,
-            fieldRuling: decisions,
-            timeline: tempTimeline
+            gameStart: true
           })
+        },
+        openDiceMenu: () => {
+          this.setState({
+            diceMenu: true
+          }) 
+        },
+        closeDiceMenu: () => {
+          this.setState({
+            diceMenu: false
+          }) 
         }
       }}>
         { this.props.children }

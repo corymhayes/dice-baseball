@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-import '../font/stylesheet.css';
 import './style.scss';
 
 

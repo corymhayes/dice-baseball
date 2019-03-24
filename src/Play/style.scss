@@ -1,16 +1,17 @@
 @import '../Colors.scss';
 
+
 .play{
-  justify-self: stretch;
-  align-self: stretch;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 5px solid $khaki;
   
   h1{
     font-weight: normal;
-    font-size: calc(1em + 1vw);
+    font-size: 3rem;
+    line-height: 2rem;
+    text-transform: lowercase;
+    text-align: center;
   }
 }
 
@@ -23,9 +24,9 @@
       border: none;
       
       h1{
-        font-size: 5rem;
+        font-size: 3.25rem;
         text-transform: lowercase;
-        line-height: 2.5rem;
+        line-height: 1.5rem;
         text-align: center;
         border: none;
       }

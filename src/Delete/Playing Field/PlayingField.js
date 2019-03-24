@@ -7,7 +7,7 @@ class PlayingField extends Component{
         <div className="field">
           {
             this.props.firstBase === 1 ? 
-              <div className="first-base-runner"></div>
+              <div className="first-base runner"></div>
             :
               <div className="first-base"></div>
           }

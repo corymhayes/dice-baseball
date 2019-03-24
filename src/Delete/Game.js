@@ -9,7 +9,10 @@ import Scoreboard from './Scoreboard/Scoreboard';
 import PlayingField from './Playing Field/PlayingField';
 
 // import './Game.scss';
-import './Mobile.scss';
+// import './Mobile.scss';
+
+import './style.scss'
+
 
 class Game extends Component {
   render() {

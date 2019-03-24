@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Context } from './Provider';
 import Scoreboard from './Scoreboard/Scoreboard';
-import CurrentInning from './Current Inning/CurrentInning';
 import PlayingField from './Playing Field/PlayingField';
 import DiceRoll from './Dice Roll/DiceRoll';
 import Play from './Play/Play';
@@ -9,7 +8,7 @@ import RollButton from './RollButton/RollButton';
 
 import './Mobile.scss';
 
-class Game extends Component {
+class Mobile extends Component {
   render() {
     return (
       <Context.Consumer>
@@ -17,6 +16,7 @@ class Game extends Component {
             <div className="container">
               <div className="scoreboard">
                 <Scoreboard 
+                  currentSide={context.state.currentSide}
                   homeOne={context.state.homeScore[0]} 
                   awayOne={context.state.awayScore[0]} 
                   homeTwo={context.state.homeScore[1]} 
@@ -42,7 +42,6 @@ class Game extends Component {
                 />
               </div>
               <div className="playing-board">
-                <CurrentInning inning={context.state.currentInning} />
                 <PlayingField 
                   firstBase={context.state.bases.firstBase}
                   secondBase={context.state.bases.secondBase}
@@ -51,10 +50,6 @@ class Game extends Component {
                 <div className="outs">
                   <h1>{context.state.outs}</h1>
                   <span className="title">outs</span>
-                </div>
-                <div className="runs">
-                  <h1>{context.state.runs}</h1>
-                  <span className="title">runs</span>
                 </div>
               </div>
               <div className="die-play">
@@ -69,4 +64,4 @@ class Game extends Component {
   }
 }
 
-export default Game;
+export default Mobile;

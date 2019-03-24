@@ -1,4 +1,4 @@
-@import './font/stylesheet.css';
+@import './fonts/stylesheet.css';
 @import './Colors.scss';
 
 
@@ -19,11 +19,12 @@
         font-family: 'bartenderserif_letterpress', sans-serif;
       }
 
-      .container{
-        display: grid;
-        height: 100vh;
-        border: 5px solid $khaki;
-        grid-template-rows: 15% 55% 20% 1fr;
+      // .container{
+      //   display: grid;
+      //   height: 99vh;
+      //   border: 5px solid $khaki;
+      //   grid-template-rows: 15% 55% 20% 1fr;
+      //   grid-template-columns: 1fr;
 
         .playing-board{
           grid-row: 2;
@@ -78,5 +79,5 @@
           grid-template-columns: repeat(2, 1fr);
           border-bottom: 5px solid $khaki;
         }
-      }
+      // }
 }

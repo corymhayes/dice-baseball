@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Dice from './Dice/Dice';
-// import RollButton from './RollButton/RollButton'
 
 import './style.scss';
 

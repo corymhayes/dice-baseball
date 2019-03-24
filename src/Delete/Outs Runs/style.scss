@@ -2,28 +2,20 @@
 
 .outs-runs{
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+}
+
+.number-of{
+  font-size: 5rem;
+  line-height: 3rem;
 }
 
 h3{
-  font-size: 3rem;
-  color: $khaki;
-  font-weight: normal;
-  margin: 0 .75rem .25rem;;
-}
-
-.out-dot{
-  height: .75rem;
-  width: .75rem;
-  border-radius: 10px;
-  background-color: $khaki;
-}
-
-.marker{
-  background-color: $red;
+  color: $red;
+  font-size: 2.5rem;
+  line-height: 1rem;
 }
 
 @media only screen 
@@ -32,6 +24,7 @@ h3{
 
     .outs-runs{
       display: flex;
+      flex-flow: column;
       justify-content: center;
       align-items: center;
     }
@@ -42,7 +35,8 @@ h3{
     }
 
     h3{
-      font-size: 3.25rem;
+      color: $red;
+      font-size: 2.5rem;
       line-height: 1rem;
     }
 }

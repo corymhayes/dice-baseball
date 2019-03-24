@@ -5,9 +5,9 @@ import './style.scss';
 class RollButton extends Component {
   render(){
     return(
-      <div>
-        <button onClick={this.props.click}>roll</button>
-      </div>
+      <>
+        <button onClick={this.props.click}>swing</button>
+      </>
     )
   }
 }

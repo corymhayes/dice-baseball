@@ -1,98 +1,61 @@
 @import '../Colors.scss';
 
-// .playing-board{
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
+.field{
+  // position: absolute;
+  // min-width: 10%;
+  // width: 50%;
+  border: 10px solid $khaki;
+  transform: rotate(45deg);
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeate(5, 1fr);
+  // z-index: 0;
 
-  .field{
-    height: 25rem;
-    width: 25rem;
-    border: 5px solid $khaki;
-    transform: rotate(45deg);
-
-    .bases{
-      height: 100%;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 15% 1fr 15%;
-      grid-template-rows: 15% 1fr 15%;
-
-      .first-base,
-      .second-base,
-      .third-base,
-      .home-plate{
-        height: 100%;
-        width: 100%;
-        background-color: $khaki;
-      }
-
-      .first-base{
-        grid-row: 1;
-        grid-column: 3;
-      }
-
-      .second-base{
-        grid-row: 1;
-        grid-column: 1;
-      }
-
-      .third-base{
-        grid-row: 3;
-        grid-column: 1;;
-      }
-
-      .home-plate{
-        grid-row: 3;
-        grid-column: 3;
-      }
-
-      .runner{
-        background-color: $red;
-      }
-    }
+  .first-base,
+  .second-base,
+  .third-base{
+    height: 100%;
+    width: 100%;
+    background-color: $khaki;
   }
-// }
 
-@media only screen 
-    and (device-width : 375px) 
-    and (device-height : 812px) 
-    and (-webkit-device-pixel-ratio : 3) { 
+  .first-base{
+    grid-row: 1;
+    grid-column: 5;
+    margin-top: -1px;
+    margin-left: 1px;
+  }
 
-    .field{
-      grid-row: 2;
-      grid-column: 2;
-      width: 11rem;
-      height: 11rem;
-      border: 5px solid $khaki;
-      transform: rotate(45deg);
-      display: grid;
-      grid-template-rows: repeat(5, 1fr);
-      grid-template-columns: repeate(5, 1fr);
+  .first-base-runner{
+    grid-row: 1;
+    grid-column: 5;
+    margin-top: 0px;
+    margin-left: 1px;
+    background-color: $red;
+  }
 
-      .first-base,
-      .second-base,
-      .third-base{
-        background-color: $khaki;
-      }
+  .second-base{
+    grid-row: 1;
+    grid-column: 1;
+    margin-top: -1px;
+    margin-left: -1px;
+  }
 
-      .first-base{
-        grid-row: 1;
-        grid-column: 5;
-      }
+  .third-base{
+    grid-row: 5;
+    grid-column: 1;
+    margin-top: 1px;
+    margin-left: -1px;
+  }
 
-      .second-base{
-        grid-row: 1;
-        grid-column: 1;
-      }
+  .runner{
+    background-color: $red;
+    margin: 0;
+  }
+}
 
-      .third-base{
-        grid-row: 5;
-        grid-column: 1;
-      }
-
-      .runner{
-        background-color: $red;
-      }
-    }
+.field:after{
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }

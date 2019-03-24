@@ -1,51 +1,47 @@
 @import '../../Colors.scss';
 
 .dice{
-  height: 5rem;
-  width: 5rem;
+  height: 4rem;
+  width: 4rem;
   background-color: $khaki;
   display: flex;
+  flex-flow: row;
   justify-content: center;
   align-items: center;
 
-
-  // DICE ONE //
-
-  .one{
+  .one,
+  .two,
+  .three,
+  .four,
+  .five,
+  .six{
+    height: 3.5rem;
+    width: 3.5rem;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
     place-items: center center;
+  }
 
+  .dot{
+    height: 1rem;
+    width: 1rem;
+    border-radius: 10rem;
+    background-color: $red;
+  }
+
+
+  // DICE ONE //
+  .one{
     .dot-one{
       grid-column: 2;
       grid-row: 2;
-      height: 1rem;
-      width: 1rem;
-      border-radius: 10rem;
-      background-color: $red;
     }
-  } 
+  }
 
 
   // DICE TWO //
-
   .two{
-    // height: 4.5rem;
-    // width: 4.5rem;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center center;
-    
-    .dot-one,
-    .dot-two{
-      height: 1rem;
-      width: 1rem;
-      border-radius: 10rem;
-      background-color: $red;
-    }
-
     .dot-one{
       grid-column: 1;
       grid-row: 1;
@@ -55,28 +51,11 @@
       grid-column: 3;
       grid-row: 3;
     }
-  } 
+  }
 
 
   // DICE THREE //
-
   .three{
-    height: 4.5rem;
-    width: 4.5rem;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center center;
-    
-    .dot-one,
-    .dot-two,
-    .dot-three{
-      height: 1rem;
-      width: 1rem;
-      border-radius: 10rem;
-      background-color: $red;
-    }
-
     .dot-one{
       grid-column: 1;
       grid-row: 1;
@@ -97,23 +76,6 @@
   // DICE FOUR //
   
   .four{
-    height: 4.5rem;
-    width: 4.5rem;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center center;
-    
-    .dot-one,
-    .dot-two,
-    .dot-three,
-    .dot-four{
-      height: 1rem;
-      width: 1rem;
-      border-radius: 10rem;
-      background-color: $red;
-    }
-
     .dot-one{
       grid-column: 1;
       grid-row: 1;
@@ -139,24 +101,6 @@
   // DICE FIVE //
 
   .five{
-    height: 4.5rem;
-    width: 4.5rem;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center center;
-    
-    .dot-one,
-    .dot-two,
-    .dot-three,
-    .dot-four,
-    .dot-five{
-      height: 1rem;
-      width: 1rem;
-      border-radius: 10rem;
-      background-color: $red;
-    }
-
     .dot-one{
       grid-column: 1;
       grid-row: 1;
@@ -187,25 +131,6 @@
   // DICE SIX //
 
   .six{
-    height: 4.5rem;
-    width: 4.5rem;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center center;
-    
-    .dot-one,
-    .dot-two,
-    .dot-three,
-    .dot-four,
-    .dot-five,
-    .dot-six{
-      height: 1rem;
-      width: 1rem;
-      border-radius: 10rem;
-      background-color: $red;
-    }
-
     .dot-one{
       grid-column: 1;
       grid-row: 1;
