@@ -35,7 +35,6 @@ class VersionTwo extends Component{
                 }
               </div>
               <div className="game-body">
-                <div></div>
                 <div className="game-scoreboard">
                   <Scoreboard 
                     currentSide={context.state.currentSide}
@@ -150,9 +149,9 @@ class VersionTwo extends Component{
                   <div className="play-v2">
                     <Play fieldRuling={context.state.fieldRuling} />
                   </div>
-                </div>
-                <div className="swing-button-v2">
+                  <div className="swing-button-v2">
                     <RollButton click={context.rollDice} />
+                  </div>
                 </div>
               </div>
             </div>
