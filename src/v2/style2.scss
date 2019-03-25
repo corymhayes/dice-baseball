@@ -19,6 +19,11 @@ h6{
 
 body{
   border: none;
+  background-color: $grey;
+}
+
+.desktop{
+  height: 100%;
 }
 
 .mobile{
@@ -135,14 +140,15 @@ body{
     and (device-width : 375px) 
     and (device-height : 812px) 
     and (orientation: portrait)
-    and (-webkit-device-pixel-ratio : 3) { 
+    and (-webkit-device-pixel-ratio : 2) { 
 
       *{
         box-sizing: border-box;
       }
 
       .desktop{
-        display: none;
+        height: 100%;
+        display: hidden;
       }
 
       .mobile{
@@ -235,7 +241,9 @@ body{
       }
 
       .mobile{
-        display: inline-block;
+        display: inline;
+
+        background-color: $grey;
       }
 
       .game-container{
