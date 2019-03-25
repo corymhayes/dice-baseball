@@ -22,7 +22,7 @@ class Modal extends Component{
             possible outcomes from each dice roll.
           </p>
 
-          <button onClick={this.props.click}>let's play</button>
+          <button onClick={this.props.click}>play ball</button>
           
         </div>
       </div>

@@ -91,9 +91,9 @@ class VersionTwo extends Component{
 
           <div className="mobile">
           {
-              // !context.state.gameStart ?
-              //   <Modal click={context.startGame} />
-              // :
+              !context.state.gameStart ?
+                <Modal click={context.startGame} />
+              :
             <div className="game-container">
               {/* <div className="dice-combination-menu">
                 {

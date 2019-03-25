@@ -21,7 +21,9 @@ body{
   border: none;
 }
 
-
+.mobile{
+  display: none;
+}
 
 .game-container{
   width: 100vw;
@@ -143,6 +145,10 @@ body{
         display: none;
       }
 
+      .mobile{
+        display: inline-block;
+      }
+
       .game-container{
         border: $border-template;
         height: 100vh;
@@ -154,7 +160,7 @@ body{
           height: 100%;
           display: grid;
           grid-template-columns: 1fr;
-          grid-template-rows: 15% 45% 40%;
+          grid-template-rows: 20% 40% 40%;
 
           .game-scoreboard{
             border: none;
@@ -226,6 +232,10 @@ body{
 
       .desktop{
         display: none;
+      }
+
+      .mobile{
+        display: inline-block;
       }
 
       .game-container{
