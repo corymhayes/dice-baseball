@@ -22,9 +22,9 @@ body{
   background-color: $grey;
 }
 
-.desktop{
-  height: 100%;
-}
+// .desktop{
+//   height: 100%;
+// }
 
 .mobile{
   display: none;
@@ -137,18 +137,17 @@ body{
 }
 
 @media only screen 
-    and (device-width : 375px) 
-    and (device-height : 812px) 
+    and (min-device-width : 375px) 
+    and (max-device-height : 812px) 
     and (orientation: portrait)
-    and (-webkit-device-pixel-ratio : 2) { 
+    and (-webkit-device-pixel-ratio : 3) { 
 
       *{
         box-sizing: border-box;
       }
 
       .desktop{
-        height: 100%;
-        display: hidden;
+        display: none;
       }
 
       .mobile{
@@ -227,8 +226,8 @@ body{
 }
 
 @media only screen 
-    and (device-width : 812px) 
-    and (device-height : 375px) 
+    and (min-device-width : 375px) 
+    and (max-device-width : 812px) 
     and (orientation: landscape)
     and (-webkit-device-pixel-ratio : 3) { 
 
@@ -242,7 +241,6 @@ body{
 
       .mobile{
         display: inline;
-
         background-color: $grey;
       }
 
