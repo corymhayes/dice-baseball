@@ -6,7 +6,7 @@ export const Context = React.createContext();
 export default class Provider extends Component{
   state = {
     currentSide: 'home',
-    currentInning: 1,
+    currentInning: 7,
     homeScore: [0,0,0,0,0,0,0,0,0,0],
     awayScore: [0,0,0,0,0,0,0,0,0,0],
     outs: 0,
@@ -22,7 +22,8 @@ export default class Provider extends Component{
     fieldRuling: 'single',
     timeline: [],
     gameStart: false,
-    diceMenu: false
+    diceMenu: false,
+    gameOutcome: ''
   }
 
   render(){
@@ -32,10 +33,26 @@ export default class Provider extends Component{
         rollDice: () => {
           let bases = this.state.bases;
 
+          let goInning = this.state.currentInning;
+          let goSide = this.state.currentSide;
+          let goOuts = this.state.outs;
+
           let diceRollNumber1 = Math.floor(Math.random() * (7-1)) + 1;
           let diceRollNumber2 = Math.floor(Math.random() * (7-1)) + 1;
 
           let decisions = DiceRollDecisions(diceRollNumber1, diceRollNumber2, bases, this.state);
+
+          if(goInning === 9 && goOuts >= 2 && goSide === 'away'){
+            if(this.state.homeScore.reduce((item, currentItem) => item + currentItem, 0) > this.state.awayScore.reduce((item, currentItem) => item + currentItem, 0)){
+              this.setState({
+                gameOutcome: 'home'
+              })
+            } else {
+              this.setState({
+                gameOutcome: 'away'
+              })
+            }
+          }
 
           this.setState({
             bases: bases,

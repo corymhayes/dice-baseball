@@ -139,7 +139,7 @@ class VersionTwo extends Component{
                     thirdBase={context.state.bases.thirdBase}
                   />
                 </div>
-                <div className="game-info-v2">
+                <div className="game-ibsxnfo-v2">
                   <div className="outs-v2">
                     <OutsRuns outAmount={context.state.outs} />
                   </div>
