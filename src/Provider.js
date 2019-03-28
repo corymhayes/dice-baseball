@@ -6,7 +6,7 @@ export const Context = React.createContext();
 export default class Provider extends Component{
   state = {
     currentSide: 'home',
-    currentInning: 7,
+    currentInning: 1,
     homeScore: [0,0,0,0,0,0,0,0,0,0],
     awayScore: [0,0,0,0,0,0,0,0,0,0],
     outs: 0,
