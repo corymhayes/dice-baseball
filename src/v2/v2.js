@@ -74,7 +74,11 @@ class VersionTwo extends Component{
                     <DiceRoll amount1={context.state.dice1} amount2={context.state.dice2} />
                   </div>
                   <div className="swing-button-v2">
-                    <RollButton click={context.rollDice} />
+                    {
+                      !context.state.gameOutcome ?
+                        <RollButton click={context.rollDice} /> :
+                        <RollButton />
+                    }
                   </div>
                 </div>
                 <div className="field-v2">
@@ -139,7 +143,7 @@ class VersionTwo extends Component{
                     thirdBase={context.state.bases.thirdBase}
                   />
                 </div>
-                <div className="game-ibsxnfo-v2">
+                <div className="game-info-v2">
                   <div className="outs-v2">
                     <OutsRuns outAmount={context.state.outs} />
                   </div>

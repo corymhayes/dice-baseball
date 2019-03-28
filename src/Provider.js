@@ -23,7 +23,7 @@ export default class Provider extends Component{
     timeline: [],
     gameStart: false,
     diceMenu: false,
-    gameOutcome: ''
+    gameOutcome: ""
   }
 
   render(){
