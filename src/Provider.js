@@ -45,11 +45,13 @@ export default class Provider extends Component{
           if(goInning === 9 && goOuts >= 2 && goSide === 'away'){
             if(this.state.homeScore.reduce((item, currentItem) => item + currentItem, 0) > this.state.awayScore.reduce((item, currentItem) => item + currentItem, 0)){
               this.setState({
-                gameOutcome: 'home'
+                gameOutcome: 'home',
+                gameStart: false
               })
             } else {
               this.setState({
-                gameOutcome: 'away'
+                gameOutcome: 'away',
+                gameStart: false
               })
             }
           }
@@ -75,6 +77,29 @@ export default class Provider extends Component{
           this.setState({
             diceMenu: false
           }) 
+        },
+        reset: () => {
+          this.setState({
+            currentSide: 'home',
+            currentInning: 1,
+            homeScore: [0,0,0,0,0,0,0,0,0,0],
+            awayScore: [0,0,0,0,0,0,0,0,0,0],
+            outs: 0,
+            runs: 0,
+            bases: {
+              firstBase: 0,
+              secondBase: 0,
+              thirdBase: 0,
+              batter: 1
+            },
+            dice1: 1,
+            dice2: 1,
+            fieldRuling: 'single',
+            timeline: [],
+            gameStart: true,
+            diceMenu: false,
+            gameOutcome: ""
+          })
         }
       }}>
         { this.props.children }

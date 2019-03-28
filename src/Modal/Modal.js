@@ -17,12 +17,10 @@ class Modal extends Component{
           <img src={logo} alt="logo" />
 
           <p>
-            Welcome to Yakker Dice! A game of baseball where plays are decided on by the roll of the dice.
-            Roll a double two receive a double play, roll snake eyes receive a home run. Below is a list of all the
-            possible outcomes from each dice roll.
+            {this.props.message}
           </p>
 
-          <button onClick={this.props.click}>play ball</button>
+          <button onClick={this.props.click}>{this.props.buttonTitle}</button>
           
         </div>
       </div>
