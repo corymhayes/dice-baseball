@@ -96,8 +96,13 @@ class VersionTwo extends Component{
 
           <div className="mobile">
           {
+              context.state.gameOutcome ?
+                <Modal message={`${context.state.gameOutcome} WINS!!!`} click={context.reset} buttonTitle="play again" />
+              :
               !context.state.gameStart ?
-                <Modal click={context.startGame} />
+                <Modal message="Welcome to Yakker Dice! A game of baseball where plays are decided on by the roll of the dice.
+                Roll a double two receive a double play, roll snake eyes receive a home run. Below is a list of all the
+                possible outcomes from each dice roll." click={context.startGame} buttonTitle="play ball" />
               :
             <div className="game-container">
               {/* <div className="dice-combination-menu">
