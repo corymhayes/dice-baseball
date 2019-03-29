@@ -32,7 +32,7 @@
 
       .dice-combos-title{
         width: 100%;
-        margin: 2rem 0;
+        margin: 1rem 0;
 
         h1{
           font-family: 'bartenderscript_letterpress';
@@ -93,6 +93,14 @@
         grid-template-rows: repeat(11, 1fr);
         grid-template-columns: repeat(2, 1fr);
 
+        .extra-line{
+          margin-top: 2rem;
+        }
+
+        .remove-headroom{
+          margin-top: -.5rem;
+        }
+
         .dice-combo{
           display: flex;
           flex-flow: column;
@@ -137,6 +145,8 @@
             font-size: 2rem;
             line-height: 1rem;
             text-align: center;
+            margin-top: 0;
+            margin-bottom: 0;
 
             span{
               font-size: 1.5rem;

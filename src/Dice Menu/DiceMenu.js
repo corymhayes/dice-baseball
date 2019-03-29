@@ -93,15 +93,15 @@ class DiceMenu extends Component {
                 <DiceRoll amount1={2} amount2={4} />
                 <h5>out</h5>
               </div>
-              <div className="dice-combo">
+              <div className="dice-combo extra-line">
                 <DiceRoll amount1={5} amount2={6} />
                 <h5>sac fly<br /><span>runners advance 1 base</span></h5>
               </div>
-              <div className="dice-combo">
+              <div className="dice-combo extra-line">
                 <DiceRoll amount1={2} amount2={5} />
                 <h5>single<br /><span>runners advance 2 bases</span></h5>
               </div>
-              <div className="dice-combo">
+              <div className="dice-combo remove-headroom">
                 <DiceRoll amount1={6} amount2={6} />
                 <h5>triple</h5>
               </div>
@@ -112,7 +112,7 @@ class DiceMenu extends Component {
             </div>
           </div>
       
-          <div className="menu-overlay">
+          <div className="menu-overlay" onClick={this.props.menuClose}>
             <button onClick={this.props.menuClose}><div className="dot"></div></button>
           </div>
         </div>
