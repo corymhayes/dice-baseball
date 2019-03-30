@@ -1,12 +1,11 @@
 // Components
 import React, { Component } from 'react'
-import Dice from '../Dice Roll/DiceRoll';
 
 // Images
 import logo from '../images/transparent-logo.png';
 
 // Styles
-import './style.scss';
+import './Modal.scss';
 
 
 class Modal extends Component{
@@ -20,7 +19,7 @@ class Modal extends Component{
             {this.props.message}
           </p>
 
-          <button onClick={this.props.click}>{this.props.buttonTitle}</button>
+          <button className="modal-button" onClick={this.props.click}>{this.props.buttonTitle}</button>
           
         </div>
       </div>

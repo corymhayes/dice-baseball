@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Dice from '../Dice Roll/Dice/Dice'
 import DiceRoll from '../Dice Roll/DiceRoll'
 
-import './style.scss';
+import './DiceMenu.scss';
 
 
 class DiceMenu extends Component {
@@ -113,7 +113,7 @@ class DiceMenu extends Component {
           </div>
       
           <div className="menu-overlay" onClick={this.props.menuClose}>
-            <button onClick={this.props.menuClose}><div className="dot"></div></button>
+            <button className="dice-combination-button" onClick={this.props.menuClose}><div className="dot"></div></button>
           </div>
         </div>
     )

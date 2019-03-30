@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import VersionTwo from './v2/v2';
+import Yakker from './Yakker';
 import Provider from './Provider'
 import * as serviceWorker from './serviceWorker';
 
 
-ReactDOM.render(<Provider><VersionTwo /></Provider>, document.getElementById('root'))
+ReactDOM.render(<Provider><Yakker /></Provider>, document.getElementById('root'))
 
 
 // If you want your app to work offline and load faster, you can change

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './style.scss';
+import './OutsRuns.scss';
 
 
 class OutsRuns extends Component {

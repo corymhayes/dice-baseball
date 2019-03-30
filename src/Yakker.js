@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import { Context } from '../Provider';
-import Scoreboard from '../Scoreboard/Scoreboard';
-import PlayingField from '../Playing Field/PlayingField';
-import DiceRoll from '../Dice Roll/DiceRoll';
-import Dice from '../Dice Roll/Dice/Dice';
-import Play from '../Play/Play';
-import RollButton from '../RollButton/RollButton';
-import OutsRuns from '../Outs Runs/OutsRuns';
-import Modal from '../Modal/Modal';
-import DiceMenu from '../Dice Menu/DiceMenu';
+import { Context } from './Provider';
+import Scoreboard from './Scoreboard/Scoreboard';
+import PlayingField from './Playing Field/PlayingField';
+import DiceRoll from './Dice Roll/DiceRoll';
+import Play from './Play/Play';
+import RollButton from './RollButton/RollButton';
+import OutsRuns from './Outs Runs/OutsRuns';
+import Modal from './Modal/Modal';
+import DiceMenu from './Dice Menu/DiceMenu';
 
-import './style2.scss';
-import logo from '../images/transparent-logo.png';
+import './Yakker.scss';
 
 
 class VersionTwo extends Component{
@@ -23,18 +21,25 @@ class VersionTwo extends Component{
           <div className="desktop">
           {
               context.state.gameOutcome ?
-                <Modal message={`${context.state.gameOutcome} WINS!!!`} click={context.reset} buttonTitle="play again" />
+                <Modal 
+                  message={`${context.state.gameOutcome} WINS!!!`} 
+                  click={context.reset} 
+                  buttonTitle="play again" 
+                />
               :
               !context.state.gameStart ?
-                <Modal message="Welcome to Yakker Dice! A game of baseball where plays are decided on by the roll of the dice.
-                Roll a double two receive a double play, roll snake eyes receive a home run. Below is a list of all the
-                possible outcomes from each dice roll." click={context.startGame} buttonTitle="play ball" />
+                <Modal 
+                message="Welcome to Yakker Dice! A game of baseball where plays are decided on by the roll of the dice.
+                Roll a double two receive a double play, roll snake eyes receive a home run." 
+                click={context.startGame} 
+                buttonTitle="play ball" 
+                />
               :
             <div className="game-container">
               <div className="dice-combination-menu">
                 {
                   !context.state.diceMenu ?
-                    <button onClick={context.openDiceMenu}><div className="dot"></div></button>
+                    <button className="dice-combination-button" onClick={context.openDiceMenu}><div className="dot"></div></button>
                     :
                     <DiceMenu menuClose={context.closeDiceMenu} />
                 }

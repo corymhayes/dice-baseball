@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Dice from './Dice/Dice';
 
-import './style.scss';
+import './DiceRoll.scss';
 
 class DiceRoll extends Component {
   render(){

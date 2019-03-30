@@ -3,7 +3,7 @@
 .field{
   // position: absolute;
   // min-width: 10%;
-  // width: 50%;
+  width: 50%;
   border: 10px solid $khaki;
   transform: rotate(45deg);
   display: grid;
@@ -58,4 +58,10 @@
   content: "";
   display: block;
   padding-bottom: 100%;
+}
+
+@media screen and (min-width: 1920px){
+ .field{
+   width: 45%;
+ }
 }

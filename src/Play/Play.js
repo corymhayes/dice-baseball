@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './style.scss';
+import './Play.scss';
 
 
 class Play extends Component {

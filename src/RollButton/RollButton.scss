@@ -1,6 +1,6 @@
 @import '../Colors.scss';
 
-button{
+.roll-button{
   height: 3rem;
   width: 10rem;
   // width: 100%;
@@ -17,7 +17,7 @@ button{
     and (device-height : 812px) 
     and (-webkit-device-pixel-ratio : 3) { 
     
-    button{
+    .roll-button{
       height: 100%;
       width: 100%;
       background-color: $red;
@@ -27,4 +27,10 @@ button{
       font-family: 'bartendersans', sans-serif;
       -webkit-tap-highlight-color: transparent;
     }
+}
+
+@media screen and (min-width : 1920px){ 
+  .roll-button{
+    font-size: 5rem;
+  }
 }

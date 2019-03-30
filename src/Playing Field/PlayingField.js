@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.scss';
+import './PlayingField.scss';
 
 class PlayingField extends Component{
   render(){

@@ -1,15 +1,5 @@
 @import '../Colors.scss';
 
-@keyframes slide-in{
-  0%{
-    width: 0%;
-  }
-
-  100%{
-    width: 100%;
-  }
-}
-
 .dice-combination-menu{
   position: absolute;
   top: 0;
@@ -156,10 +146,21 @@
       }
     }
 
+    .dice-combos-body::-webkit-scrollbar{
+      display: none;
+    }
+
     .menu-overlay{
       background-color: rgba(0,0,0,.75);
       z-index: 1000;
       display: fixed;
     }
   }
-}  
+}
+
+@media screen and (min-width: 1920px) {
+  .dice{
+      min-height: 1.5rem;
+      min-width: 1.5rem;
+  }
+}

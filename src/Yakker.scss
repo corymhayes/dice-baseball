@@ -1,5 +1,5 @@
-@import '../fonts/stylesheet.css';
-@import '../Colors.scss';
+@import './fonts/stylesheet.css';
+@import './Colors.scss';
 $border-template: .5rem solid $khaki;
 
 
@@ -37,7 +37,7 @@ body{
   justify-content: center;
   align-items: center;
   background: 
-    url("../images/background.jpg")
+    url("./images/background.jpg")
     center center / cover;
   font-family: 'bartendersans', sans-serif;
   font-weight: normal;
@@ -48,7 +48,7 @@ body{
     top: 0;
     left: 0;
 
-    button{
+    .dice-combination-button{
       height: 1.5rem;
       width: 1.5rem;
       background-color: $khaki;
@@ -56,6 +56,7 @@ body{
       margin-top: 1rem;
       display: flex;
       justify-content: center;
+      border: none;
 
       .dot{
         height: .4rem;
@@ -121,6 +122,7 @@ body{
         }
       }
     }
+    
     .field-v2{
       display: flex;
       justify-content: center;
@@ -128,10 +130,6 @@ body{
       border: $border-template;
       grid-row: 2;
       grid-column: 2;
-
-      .field{
-        width: 50%;
-      }
     }
   }
 }

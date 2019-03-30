@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import './style.scss';
+import './RollButton.scss';
 
 class RollButton extends Component {
   render(){
     return(
       <>
-        <button onClick={this.props.click}>swing</button>
+        <button className="roll-button" onClick={this.props.click}>swing</button>
       </>
     )
   }

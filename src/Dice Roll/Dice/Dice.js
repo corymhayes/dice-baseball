@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.scss';
+import './Dice.scss';
 
 class Dice extends Component {
   render(){

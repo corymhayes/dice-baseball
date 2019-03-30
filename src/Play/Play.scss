@@ -32,3 +32,13 @@
       }
     }
 }
+
+@media screen and (min-width: 1920px) {
+  .play{
+    padding: 0 1rem;
+    h1{
+      font-size: 4rem;
+      line-height: 2rem;
+    }
+  }
+}

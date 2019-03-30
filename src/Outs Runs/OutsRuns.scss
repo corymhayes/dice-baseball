@@ -46,3 +46,16 @@ h3{
       line-height: 1rem;
     }
 }
+
+
+@media screen and (min-width : 1920px){
+  h3{
+    font-size: 5rem;
+  }
+
+  .out-dot{
+    height: 1rem;
+    width: 1rem;
+    border-radius: 10rem;
+  }
+}

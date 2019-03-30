@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './style.scss';
+import './Scoreboard.scss';
 
 class Scoreboard extends Component{
   render(){
