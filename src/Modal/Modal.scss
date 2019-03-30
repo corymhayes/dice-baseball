@@ -13,7 +13,7 @@
 
   .modal-body{
     height: 50%;
-    width: 50%;
+    width: 35%;
     background-color: $grey;
     display: flex;
     flex-flow: column;
@@ -35,7 +35,7 @@
       font-weight: normal;
       text-transform: lowercase;
       text-align: center;
-      line-height: 1.75rem;
+      line-height: 2rem;
     }
 
     .modal-button{

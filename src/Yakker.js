@@ -30,7 +30,8 @@ class VersionTwo extends Component{
               !context.state.gameStart ?
                 <Modal 
                 message="Welcome to Yakker Dice! A game of baseball where plays are decided on by the roll of the dice.
-                Roll a double two receive a double play, roll snake eyes receive a home run." 
+                Roll a double two it's a double play or roll snake eyes and it's a home run. Good luck and may the best 
+                team win, now..." 
                 click={context.startGame} 
                 buttonTitle="play ball" 
                 />
